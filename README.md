@@ -55,26 +55,23 @@ self.epsilon_min is the minimum value that epsilon can decay to.
 self.epsilon_decay is the rate at which epsilon decreases.
 self.learning_rate is the learning rate for the neural network.
 self.model = self._build_model() creates the neural network model by calling the _build_model method.
-10-16. def _build_model(self): - This method defines the neural network architecture used for learning the Q-function:
+def _build_model(self): - This method defines the neural network architecture used for learning the Q-function:
 
 A Sequential model is created.
 Two hidden layers with 24 neurons each and ReLU activation are added.
 An output layer with size self.action_size and linear activation is added.
 The model is compiled with mean squared error as the loss and the Adam optimizer.
 def remember(self, state, action, reward, next_state, done): - This method adds an experience tuple to the agent's memory. The tuple contains the state, action taken, reward received, the next state, and a done flag indicating if the episode has ended.
-18-23. def act(self, state): - This method defines the agent's policy:
+ def act(self, state): - This method defines the agent's policy:
 
 With probability self.epsilon, a random action is chosen (exploration).
 Otherwise, the action with the highest predicted Q-value is chosen (exploitation).
-24-41. def replay(self, batch_size): - This method performs experience replay:
+ def replay(self, batch_size): - This method performs experience replay:
 
 If there are not enough experiences in memory, it returns immediately.
 Otherwise, it samples a minibatch of experiences and uses them to update the neural network.
-42-47. def one_hot_state(state): - This function is defined outside the class. It converts a state into a one-hot encoded vector.
+ def one_hot_state(state): - This function is defined outside the class. It converts a state into a one-hot encoded vector.
 
-49-57. The environment is set up using OpenAI Gym's Taxi-v3 environment. An instance of DQNAgent is created, and the number of training episodes is specified.
-
-58-76. The main training loop:
 
 Each episode starts by resetting the environment.
 For a fixed number of steps (or until the episode ends), the agent selects actions, observes outcomes, and stores these experiences.
