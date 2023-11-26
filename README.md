@@ -4,7 +4,7 @@ Within this repository you will find two seperate approaches to solving the Gymn
 
 The first and recommended approach in order to gain an intimate understanding of Reinforcement Learning withouit needing a powerful computer id Approximate Q Learning, this method does not keep track of all the Q-values assigned at each iteration.
 
-The second approach is good if you have some time and a powerful system to use it with, it serves as a very good entry way into deep learning if you have already understood what Reinforcement Learning is about.
+The second approach is good if you have some time and a powerful system to use it with, it serves as a very good entry way into deep learning if you have already understood what Reinforcement Learning is about. If you do hot have a powerful system and would still like to try this approach I would recommend a significatly smaller problem.
 
 ## Approximate Q Learning
 Below is a quick walkthrough of the code to be found for this method: 
