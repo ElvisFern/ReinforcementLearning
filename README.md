@@ -1,6 +1,6 @@
 # ReinforcementLearning
 
-Withing this repository you will find two seperate approaches to solving the Gymnasium taxi problem. https://gymnasium.farama.org/environments/toy_text/taxi/
+Within this repository you will find two seperate approaches to solving the Gymnasium taxi problem. https://gymnasium.farama.org/environments/toy_text/taxi/
 
 The first and recommended approach in order to gain an intimate understanding of Reinforcement Learning withouit needing a powerful computer id Approximate Q Learning, this method does not keep track of all the Q-values assigned at each iteration.
 
