@@ -1,5 +1,14 @@
+# The Problem Space
 
+Taxi-v3 from the gym series innitially started with openAI currently being continued by [Gymnasium](https://gymnasium.farama.org/environments/toy_text/taxi/)
 
+### State Space :
+Discrete 500 
+
+### Action Space:
+Discrete 6
+
+For more details navigate to the [Taxi](https://gymnasium.farama.org/environments/toy_text/taxi/) problem page by clicking on the hyperlinks.
 ## Approximate Q Learning
 ----------------------------
 ### Learning Approach:
@@ -40,9 +49,3 @@
 
 
 
-
-
-![image](https://github.com/ElvisFern/ReinforcementLearning/assets/78712154/d1f24160-728d-481f-8fbb-392d64f66b30)
-
-The results of the training (rewards and losses) are plotted using Matplotlib to visualize the agent's learning progress.
-![image](https://github.com/ElvisFern/ReinforcementLearning/assets/78712154/729f39bf-1558-4585-b4b4-e0a1003d4ea0)
