@@ -13,10 +13,10 @@
 * Training Phase: Rewards are accumulated per episode during training. The focus is on how the agent's policy improves over time.
 * Testing Phase: The agent is tested over a set number of episodes, calculating the average reward and average steps per episode which lets us know how robust the policy is learned
 
-import numpy as np: This line imports the numpy library, which is a fundamental package for scientific computing in Python. It's often abbreviated as np.
+### Visualization
+*	A single plot is generated to visualize the average rewards per episode during the training phase. This plot helps in understanding the learning progression and effectiveness of the agent's policy over time.
 
 
-class ApproximateQLearningAgent:: This line defines a new class named ApproximateQLearningAgent. This class will represent an agent that learns how to make decisions using an approximate form of Q-learning.
 
 The __init__ method is the constructor for the class. It initializes an instance of the ApproximateQLearningAgent class with specific parameters:
 
@@ -72,9 +72,11 @@ def test_agent(agent, env, num_episodes): This function tests the trained agent 
 * The agent is trained over multiple episodes, with rewards accumulated per episode. Additionally, the average loss during replay (experience replay) is calculated.
 * There is also a test phase where the trained agent is evaluated over a number of episodes to compute the average test reward in order to test the robustness of the learned policy.
 
+### Visualization :
+* Training Rewards per Episode: This plot visualizes the total reward accumulated in each training episode, providing insight into how the agent's performance improves over time.
+* Training Loss per Replay: This plot shows the loss incurred during each replay (experience replay), indicating how well the agent is learning from past experiences.
 
 
-class DQNAgent: - This line begins the definition of a class named DQNAgent. A class in Python is a blueprint for creating objects (a particular data structure), providing initial values for state (member variables or attributes), and implementations of behavior (member functions or methods).
 
 def __init__(self, state_size, action_size): - This is the constructor for the DQNAgent class. It's called when an instance of the class is created. The parameters state_size and action_size are the dimensions of the state and action spaces of the environment, respectively.
 
@@ -124,10 +126,7 @@ Otherwise, it samples a minibatch of experiences and uses them to update the neu
 
 
 
-Each episode starts by resetting the environment.
-For a fixed number of steps (or until the episode ends), the agent selects actions, observes outcomes, and stores these experiences.
-The agent's epsilon value is decayed over time.
-If enough memories are gathered, the replay function is called to update the model.
+
 
 ![image](https://github.com/ElvisFern/ReinforcementLearning/assets/78712154/d1f24160-728d-481f-8fbb-392d64f66b30)
 
