@@ -1,13 +1,17 @@
-# ReinforcementLearning
 
-Within this repository you will find two seperate approaches to solving the Gymnasium taxi problem. https://gymnasium.farama.org/environments/toy_text/taxi/
-
-The first and recommended approach in order to gain an intimate understanding of Reinforcement Learning withouit needing a powerful computer id Approximate Q Learning, this method does not keep track of all the Q-values assigned at each iteration.
-
-The second approach is good if you have some time and a powerful system to use it with, it serves as a very good entry way into deep learning if you have already understood what Reinforcement Learning is about. If you do hot have a powerful system and would still like to try this approach I would recommend a significatly smaller problem.
 
 ## Approximate Q Learning
-Below is a quick walkthrough of the code to be found for this method: 
+----------------------------
+### Learning Approach:
+
+*	Linear function approximation with weights for estimating Q-values.
+*	Key parameters: learning rate (alpha), discount rate (gamma), exploration rate (epsilon), and weight matrix for Q-values
+*	Methods for action selection (choose_action), updating Q-values (update), and updating exploration rate (update_epsilon).
+
+### Evaluation Metrics:
+
+* Training Phase: Rewards are accumulated per episode during training. The focus is on how the agent's policy improves over time.
+* Testing Phase: The agent is tested over a set number of episodes, calculating the average reward and average steps per episode which lets us know how robust the policy is learned
 
 import numpy as np: This line imports the numpy library, which is a fundamental package for scientific computing in Python. It's often abbreviated as np.
 
@@ -56,6 +60,19 @@ def test_agent(agent, env, num_episodes): This function tests the trained agent 
 
 
 ## Deep Q-Learning Using Tensorflow
+------------------------------------
+
+### Learning Approach:
+* A neural network model is built for function approximation. The network consists of two hidden layers with 24 neurons each, using ReLU activation. The output layer has a size equal to the number of actions and uses linear activation.
+* Key parameters: discount rate (gamma), exploration rate (epsilon), learning rate, and a memory buffer for experience replay.
+* Methods for choosing actions (act), storing experiences (remember), and learning from experiences (replay).
+
+### Evaluation Metrics:
+* The performance of the agent is evaluated based on the rewards per episode and the loss during training.
+* The agent is trained over multiple episodes, with rewards accumulated per episode. Additionally, the average loss during replay (experience replay) is calculated.
+* There is also a test phase where the trained agent is evaluated over a number of episodes to compute the average test reward in order to test the robustness of the learned policy.
+
+
 
 class DQNAgent: - This line begins the definition of a class named DQNAgent. A class in Python is a blueprint for creating objects (a particular data structure), providing initial values for state (member variables or attributes), and implementations of behavior (member functions or methods).
 
